@@ -24,12 +24,14 @@ import com.mmall.vo.OrderVo;
 import com.mmall.vo.ShippingVo;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+@Service("orderServiceImpl")
 public class OrderServiceImpl implements IOrderService {
     @Autowired
     private CartMapper cartMapper;

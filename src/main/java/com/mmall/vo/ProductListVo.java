@@ -17,6 +17,8 @@ public class ProductListVo {
 
     private String imageHost;
 
+
+
     public Integer getId() {
         return id;
     }
