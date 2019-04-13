@@ -9,9 +9,13 @@
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan base-package="com.mmall" annotation-config="true"/>
+<!--spring容器中不扫描controller注解，而是让springMVC来扫描，因为-->
+    <context:component-scan base-package="com.mmall" annotation-config="true">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+        
+    </context:component-scan>
 
-    <!--<context:annotation-config/>-->
+
     <aop:aspectj-autoproxy/>
 
 
